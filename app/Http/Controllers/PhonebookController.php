@@ -19,7 +19,7 @@ class PhonebookController extends Controller
 
     public function searchByName($name)
     {
-        return Phonebook::where('lower(name)','like','%'.strtolower($name).'%')->paginate(8);
+        return Phonebook::where('LOWER(name)','like','%'.strtolower($name).'%')->paginate(8);
     }
     
 
