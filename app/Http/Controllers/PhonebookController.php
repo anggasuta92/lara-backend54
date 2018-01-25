@@ -14,12 +14,12 @@ class PhonebookController extends Controller
      */
     public function index()
     {
-        return Phonebook::paginate(8);
+        return Phonebook::paginate(5);
     }
 
     public function searchByName($name)
     {
-        return Phonebook::where('name','ilike','%'.strtolower($name).'%')->paginate(8);
+        return Phonebook::where('name','ilike','%'.strtolower($name).'%')->paginate(5);
     }
     
 
